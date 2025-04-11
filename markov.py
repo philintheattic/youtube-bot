@@ -1,6 +1,11 @@
 import random
 
-txt = "There is a sample text based on a theremin that is theirs."
+# txt = "There is a sample text based on a theremin that is theirs."
+
+# get some input text from a file
+with open("text.txt" ,"r", encoding="utf-8") as f:
+    txt = f.read().strip().replace("\n", "")
+
 order = 3
 ngrams = {}
 
@@ -18,7 +23,10 @@ for i in range(len(txt)-order):
         
 def markovIt(iterations):
     # start with the first ngram of the input string
-    currentGram = txt[0:order]
+    # currentGram = txt[0:order]
+
+    # start with random ngram
+    currentGram = random.choice(list(ngrams))
 
     # initialize result string that we can append characters to
     result = currentGram
@@ -45,4 +53,4 @@ def markovIt(iterations):
     return result
 
 #example usage:
-print(markovIt(50))
+print(markovIt(500))

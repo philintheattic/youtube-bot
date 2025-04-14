@@ -3,10 +3,10 @@ import random
 # txt = "There is a sample text based on a theremin that is theirs."
 
 # get some input text from a file
-with open("text.txt" ,"r", encoding="utf-8") as f:
+with open("otto.txt" ,"r", encoding="utf-8") as f:
     txt = f.read().strip().replace("\n", "")
 
-order = 3
+order = 12
 ngrams = {}
 
 for i in range(len(txt)-order):

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="input-container">
+        <h1>Blackout Poetry Generator</h1>
+        <form method="post">
+        <textarea rows="8" cols="50" name="poem" id="inputText"></textarea>
+        <br>
+        <button type="submit">Generate!</button>
+        </form>
+        <textarea rows="8" cols="50" name="output" id="inputText">{{ poem }}</textarea>
+    </div>
+
+{% endblock %}
+
+
